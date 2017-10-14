@@ -1,0 +1,32 @@
+SMS Naive Bayes Classifier - v1
+-------------------------
+
+DESCRIPTION
+--------------
+
+SMS Naive Bayes Classifier is a classifier that uses multivariant random variables to classify SMS as "ham" or "spam".
+
+2. USAGE
+--------
+
+It is possible to set the verbose level in SMS_bayes.py. When the k_fold_text function is called, the last parameter is verbose level (True or False).
+
+k_fold_text requires:
+  -the number of folds
+  -a dataset as a dictionary with SMS text as key and classification as value
+  -a list of strings of target values (values of possible classification)
+  -a vocabulary of all words in all SMSs; the key of this vocabulary is the word and the value is the number of times that word appears in the dataset
+  -the verbose level (True for verbose output, False otherwise)
+
+textClassifyNaiveBayes is a class that manages the classification of a word given a training set.
+In __init__() the class computes the probability of each target value and of each word given each target value separately.
+These probabilities are stored in some instance variables, that are used from the classify() function for the classification of each new instance.
+The classify() function returns a value between 0 and 1 for each target value. The target value that has maximum value is the one selected from the classifier for the new istance.
+
+__init__() function requires:
+  -a dataset as a dictionary with SMS text as key and classification as value
+  -a list of string of target values (values of possibile classification)
+  -a vocabulary of all words in all SMSs; the key of this vocabulary is the word and the value is the number of times that word appears in the dataset
+
+classify() function requires:
+  -a new instance as SMS text
