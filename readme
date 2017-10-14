@@ -11,7 +11,7 @@ SMS Naive Bayes Classifier is a classifier that uses multivariant random variabl
 
 It is possible to set the verbose level in SMS_bayes.py. When the k_fold_text function is called, the last parameter is verbose level (True or False).
 
-k_fold_text requires:
+k_fold_text() requires:
   -the number of folds
   -a dataset as a dictionary with SMS text as key and classification as value
   -a list of strings of target values (values of possible classification)
