@@ -17,6 +17,8 @@ with open("SMSSpamCollection", "r") as data_file:
         vocabulary[word]=1
       else:
         vocabulary[word]+=1
+
+#starting K-FOLD cross validation
 k=10
 result=k_fold_text(k, dataset, ["spam", "ham"], vocabulary, True)
 print("K-FOLD method with k=", k, " \nEstimated accuracy: ",result)
