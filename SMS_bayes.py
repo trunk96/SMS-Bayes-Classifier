@@ -4,7 +4,7 @@ import operator
 
 dataset={}
 vocabulary={}
-with open("SMSSpamCollection", "r") as data_file:
+with open("collection\SMSSpamCollection", "r") as data_file:
   for line in data_file:
     string=line.split('\t', 1)
 
