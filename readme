@@ -15,7 +15,6 @@ k_fold_text() requires:
   -the number of folds
   -a dataset as a dictionary with SMS text as key and classification as value
   -a list of strings of target values (values of possible classification)
-  -a vocabulary of all words in all SMSs; the key of this vocabulary is the word and the value is the number of times that word appears in the dataset
   -the verbose level (True for verbose output, False otherwise)
 
 textClassifyNaiveBayes is a class that manages the classification of a word given a training set.
