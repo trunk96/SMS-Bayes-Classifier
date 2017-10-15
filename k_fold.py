@@ -28,7 +28,7 @@ def k_fold_text(n, dataset, target_values, verbose):
                 training = {**subsets[j], **training}
         if verbose: print("\t\tTraining set successfully generated. Cardinality of training set is", len(training))
         test=subsets[i]
-                    
+
         if verbose:
             print("\t\tTest set successfully generated. Cardinality of test set is", len(test))
             print("\t\tStarting classifying element in test set...")
@@ -40,7 +40,7 @@ def k_fold_text(n, dataset, target_values, verbose):
                     dictionary[word]+=1
                 else:
                     dictionary[word]=1
-        
+
         b=textClassifyNaiveBayes(training, target_values, dictionary)
         for elem in test:
             res=b.classify(elem)
