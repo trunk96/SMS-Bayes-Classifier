@@ -1,7 +1,7 @@
 SMS Naive Bayes Classifier - v1
 -------------------------
 
-DESCRIPTION
+1. DESCRIPTION
 --------------
 
 SMS Naive Bayes Classifier is a classifier that uses multivariant random variables to classify SMS as "ham" or "spam".
