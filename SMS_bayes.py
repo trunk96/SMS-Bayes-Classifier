@@ -25,9 +25,3 @@ result=k_fold_text(k, dataset, ["spam", "ham"], False)
 print("K-FOLD method with k=", k, " \nEstimated accuracy: ",result)
 
 
-#here we can fun with the classifier :)
-b=textClassifyNaiveBayes(dataset, ["spam", "ham"], vocabulary)
-while(True):
-  res=b.classify(input())
-  classification=max(res.items(), key=operator.itemgetter(1))[0]
-  print(classification)
