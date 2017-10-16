@@ -1,10 +1,13 @@
 from k_fold import k_fold_text
 from textClassifyNaiveBayes import textClassifyNaiveBayes
 import operator
+import os
 
 dataset={}
 vocabulary={}
-with open("collection\SMSSpamCollection", "r") as data_file:
+path=""
+os.path.join(path,"collection","SMSSpamCollection")
+with open(path, "r") as data_file:
   for line in data_file:
     string=line.split('\t', 1)
 
@@ -27,7 +30,10 @@ print("K-FOLD method with k=", k, " \nEstimated accuracy: ",result)
 
 #here we can fun with the classifier :)
 b=textClassifyNaiveBayes(dataset, ["spam", "ham"], vocabulary)
-while(True):
-  res=b.classify(input())
-  classification=max(res.items(), key=operator.itemgetter(1))[0]
-  print(classification)
+text=""
+while(text!="end"):
+  text=input()
+  if text!="end":
+    res=b.classify(text)
+    classification=max(res.items(), key=operator.itemgetter(1))[0]
+    print(classification)
