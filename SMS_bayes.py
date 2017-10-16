@@ -27,8 +27,6 @@ result=k_fold_text(k, dataset, ["spam", "ham"], False)
 print("K-FOLD method with k=", k, " \nEstimated accuracy: ",result)
 
 
-<<<<<<< HEAD
-=======
 #here we can fun with the classifier :)
 print("\n\nNow you can classify any SMS...")
 b=textClassifyNaiveBayes(dataset, ["spam", "ham"], vocabulary)
@@ -39,4 +37,3 @@ while(text!="end"):
     res=b.classify(text)
     classification=max(res.items(), key=operator.itemgetter(1))[0]
     print(classification)
->>>>>>> c14a23df945a63eef41821228a85aa6f0a92dd9f
