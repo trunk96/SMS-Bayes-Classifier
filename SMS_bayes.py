@@ -5,8 +5,7 @@ import os
 
 dataset={}
 vocabulary={}
-path=""
-os.path.join(path,"collection","SMSSpamCollection")
+path=os.path.join("collection","SMSSpamCollection")
 with open(path, "r") as data_file:
   for line in data_file:
     string=line.split('\t', 1)
@@ -29,6 +28,7 @@ print("K-FOLD method with k=", k, " \nEstimated accuracy: ",result)
 
 
 #here we can fun with the classifier :)
+print("\n\nNow you can classify any SMS...")
 b=textClassifyNaiveBayes(dataset, ["spam", "ham"], vocabulary)
 text=""
 while(text!="end"):
